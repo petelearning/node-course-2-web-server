@@ -46,6 +46,13 @@ app.get('/about', (request,response) => {
   });
 })
 
+app.get('/projects', (request,response) => {
+  response.render('projects.hbs',{
+    pageTitle: 'Project Page',
+    currentYear: '2018'
+  });
+})
+
 app.get('/bad', (request,response) => {
   response.send({
     status:404,
